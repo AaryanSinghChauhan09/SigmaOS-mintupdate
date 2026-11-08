@@ -1,17 +1,10 @@
 [package]
-name = "sigmaos-mintupdate"
+name = "sigmaos_mintupdate"
 version = "0.1.0"
 edition = "2021"
-authors = ["SigmaOS Project"]
-description = "Mint update manager"
-license = "GPL-3.0-or-later"
-repository = "https://github.com/AaryanSinghChauhan09/SigmaOS-mintupdate"
-readme = "README.md"
-keywords = ["mintupdate", "update", "manager"]
-categories = ["os"]
+license = "MIT"
+description = "SigmaOS mintupdate component inspired by Linux Mint / Omarchy / Arch Linux."
 
-[dependencies]
-sigmaos-kernel = { version = "0.1", path = "../SigmaOS-kernel" }
-
-[profile.release]
-opt-level = 3
+[lib]
+name = "sigmaos_mintupdate"
+path = "src/lib.rs"
