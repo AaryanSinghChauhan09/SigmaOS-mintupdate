@@ -7,6 +7,13 @@
 
 #![forbid(unsafe_code)]
 
+pub mod mintupdate;
+
+pub use mintupdate::{
+    AutomationPlan, AutomationPolicy, MintUpdateManager, Update, UpdateError, UpdateStage,
+    UpdateState, UpdateType,
+};
+
 use std::fmt;
 /// Errors for `ToolError` operations. Fail-fast: invalid input is rejected.
 #[derive(Debug, Clone, PartialEq, Eq)]
@@ -100,5 +107,9 @@ impl Component {
     /// Create the component handle.
     pub fn new() -> Self {
         Self { name: "SigmaOS Component" }
+    }
+
+    pub fn name(&self) -> &'static str {
+        self.name
     }
 }

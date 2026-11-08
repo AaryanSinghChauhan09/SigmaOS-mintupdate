@@ -1,0 +1,16 @@
+[component]
+name = "SigmaOS-mintupdate"
+tier = 2
+stability = "scaffold"
+language = "rust"
+description = "Mint-inspired update policy and backend-reported update lifecycle; no repository or package operations"
+upstream = ["https://github.com/linuxmint/mintupdate"]
+
+[contract]
+provides = ["update-state-machine", "automation-planning", "refresh-policy"]
+depends_on = ["SigmaOS-packages", "SigmaOS-system"]
+
+[maturity]
+status = "Scaffold"
+test_evidence = "Deterministic unit tests cover policy defaults and state transitions; backend integration is not implemented"
+next_milestone = "Integrate an explicit package backend with user consent and failure recovery"

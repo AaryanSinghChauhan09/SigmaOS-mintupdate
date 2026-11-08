@@ -3,7 +3,7 @@ name = "sigmaos_mintupdate"
 version = "0.1.0"
 edition = "2021"
 license = "MIT"
-description = "SigmaOS mintupdate component inspired by Linux Mint / Omarchy / Arch Linux."
+description = "Mint-inspired update policy and backend-reported update lifecycle; no repository or package operations"
 
 [lib]
 name = "sigmaos_mintupdate"
